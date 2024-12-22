@@ -1,0 +1,19 @@
+#+title: UIOP loading under ECL
+
+This repository demonstrates some strange UIOP loading behaviour from
+executables compiled with ECL.
+
+To create such an executable, run:
+
+#+begin_example
+ecl --load build.lisp
+#+end_example
+
+This will produce a =ecl-uiop= executable. Running it should produce:
+
+#+begin_example
+Condition of type: SIMPLE-ERROR
+Package ((UIOP/UTILITY . #<UIOP/UTILITY package>)) referenced in compiled file
+  NIL
+but has not been created
+#+end_example
