@@ -7,7 +7,13 @@
 (format t "--- LOADING SYSTEM ---~%")
 (asdf:load-system :ecl-uiop)
 (format t "--- COMPILING EXECUTABLE ---~%")
-(asdf:make :ecl-uiop)
+
+#+ecl
+(asdf:make-build :ecl-uiop
+                 :type :program
+                 :move-here #p"./"
+                 :epilogue-code '(progn (ecl-uiop:main) (si:exit)))
+
 (format t "--- DONE ---~%")
 
 #+ecl
