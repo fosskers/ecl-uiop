@@ -2,7 +2,7 @@
   :version "0.0.1"
   :author "Colin Woodbury <colin@fosskers.ca>"
   :homepage "https://github.com/fosskers/ecl-uiop"
-  :depends-on ()
+  :depends-on (:uiop)
   :build-operation "program-op"
   :build-pathname "ecl-uiop"
   :entry-point "ecl-uiop:main"

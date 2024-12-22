@@ -5,4 +5,6 @@
 (in-package :ecl-uiop)
 
 (defun main ()
-  (format t "Done!~%"))
+  (if (uiop:emptyp "")
+      (format t "Empty!~%")
+      (format t "Not!~%")))
